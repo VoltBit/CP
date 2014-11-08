@@ -1,0 +1,11 @@
+Dobre Andrei Ciprian 316CB
+Algoritmul functioneaza urmand pasii:
+- se citeste o linie de text
+- cuvintele de pe linie sunt extrase si analizate separat
+- in cadrul analizarii cuvantului este realizat un vector de configuratie care retine numarul de aparitii al tuturor caracterelor de interes
+- la sfarsitul analizarii unei linii sunt cunoscute: numarul de caractere, numarul de sapatii, numarul de cuvinte, numarul de "non-cuvinte" (semnele de punctuatie dintre doua spatii)
+- se continua citirea liniilor si analizarea lor pana la finalul fisierului
+
+Mentiuni
+- Codul sursa a suferit multe modificari ca reactie la diversele teste postate pe ocw.cs.pub.ro.
+- in functia "analiza_linie" am folosit variabila nr2 pentru a contoriza "non-cuvintele" din cauza faptului ca argumenul *non_cuvinte nu era incrementat corect si nici nu isi pastra valoarea dupa iesirea din functie desi este transmis prin referinta

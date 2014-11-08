@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void citire_matrice(int A[10][10], int *n, int *m)
+{
+    int i,j,a,b;
+    scanf("%i",&a); scanf("%i",&b);
+    *n = a; *m = b;
+    for(i=0;i<*n;i++)
+        for(j=0;j<*m;j++)scanf("%i",&A[i][i]);
+}
+
+void p1()
+{
+    int A[10][10],B[10][10],m,n,i,j;
+    for(i=0;i<n;i++)
+        for(i=0;i<m;i++){}
+}
+void p2(){}
+void p3(){}
+void p4(){}
+void p5(){}
+
+int main()
+{
+    int t;
+    printf("%i",t); scanf("%i",&t);
+    switch(t)
+    {
+        case 1: p1(); break;
+        case 2: p2(); break;
+        case 3: p3(); break;
+        case 4: p4(); break;
+        case 5: p5(); break;
+    }
+    return 0;
+}
+

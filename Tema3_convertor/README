@@ -1,0 +1,22 @@
+Dobre Andrei Ciprian 316CB
+
+Descrierea algoritmului
+
+Am folosit pentru retinerea imaginilor structuri numite RGB(componente unsigned char) si RGB2(componente unsigned int). RGB este folosit pentru imaginea bmp, iar RGB2 pentru imaginea ppm. Formatul pgm este retinut intr-o matrice de intregi. Informatiile despre headere sunt retinute cu ajutorul structurilor din schelet si structura aditionala PPM_header.
+
+In interiorul functiei main are loc prelucrarea input-ului si selectia tipului de operatie dorit. La citire memoria pentru imagini este alocata dinamic si este eliberata dupa ce operatia selectata (convert,blur,crop) a fost realizata.
+Citirea se face prin functiile citire_pgm, citire_ppm si citire_bmp.
+
+Conversia:
+Este realizata de functiile ppm_to_pgm,bmp_to_pgm,bmp_to_ppm care primesc ca parametrii pointeri catre structuri care contin deja informatiile despre poze, precum si numele fisierului in care trebie sa scrie si informatii despre dimensiune.
+
+Blur:
+Efectele de blur sunt realizate separat pentru cele doua tipuri de imagini si sunt realizate de functiile blur_pgm si blur_ppm. Acestea functioneaza recursiv aplicand evectul de blur in mod repetat asupra unui fisier. blur_ppm foloseste o functie cu numar variabil de parametrii pentru a calcula mediile aritmetice pentru fiecare pixel.
+
+Crop:
+Similar conversiei scrie portiunea din imagine trimisa sub forma de coordonate.
+
+Observatii:
+
+Oricat am incercat nu am reusit sa folosesc aceeasi struxtura RGB pentru citirea ppm si bmp. Am incercat o multime de metode inclusiv citirea cu format %hhu a ppm-ului, dar nu am reusit.
+

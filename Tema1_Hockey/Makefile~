@@ -1,0 +1,4 @@
+all:
+	gcc -o exq bubble.c -Wall
+
+./exq < test.txt

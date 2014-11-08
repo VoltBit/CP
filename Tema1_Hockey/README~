@@ -1,0 +1,21 @@
+Dobre Andrei Ciprian 316CB
+Pasii de rezolvare
+
+ - analizarea cerintei si a datelor de intrare
+ - rezolvarea problemei din punct de vedere matematic, pe hartie
+ - implementare in C
+ - debugging
+
+Observatii legate de structura algoritmului
+
+Codul nu este atat de modularizat pe cat ar fi posibil. Main-ul contine 4 if-uri, fiecare cu un continut foarte asemanator. Am considerat ca realizarea unei functii care sa inlocuiasca continutul acestor if-uri ar face algoritmul prea abiguu, in principiu din cauza numarului mare de variabile. Alt mod prin care as fi putut modulariza mai mult codul ar fi fost o abordare recursiva, dar care ar fi facut debuggingul mai dificil si algoritmul mai putin flexibil.
+
+Descrierea algoritmului
+
+Algoritmul are la baza cercul trigonometric si ecuatia dreptei de forma y - y0 = m(x - x0), unde m = tan(alfa).
+
+Pentru inceput am considerat ca fiecarui cadran din cercul trigonometric ii corespund doua laturi ale terenului. Altfel spus, daca unghiul de deplasare al pucului se afla intr-un cadran, atunci pucul poate lovi doar laturile corespunzatoare acelui cadran.
+
+Urmatorul pas este sa intersectez traiectoria pucului cu dreptele verticale/orizontale pe care se afla laturile. Daca intersectia este chiar pe latura terenului atunci intersectia reprezinta punctul de unde pucul ricoseaza sau, in cazul mantinelei ce contine o poarta, unde se opreste.
+
+Testele efectuate in functie de fiecare din cele patru cadrane nu sunt obligatorii, puteam considera cadranele I,IV si II,III impreuna, dar eficienta ar fi scazut usor (era nevoie de 3 intersectii posibile).

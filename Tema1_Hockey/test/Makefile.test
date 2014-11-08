@@ -1,0 +1,19 @@
+INPUTS_DIR	= inputs/
+OUTPUTS_DIR	= exp_outputs/
+TESTS_NUMBERS	= 1 2 3 4 5 6 7 8 9
+TESTS_LIST	= $(addprefix test_, $(TESTS_NUMBERS))
+TEMA		= tema1
+
+all: all_tests
+
+all_tests: clean $(TESTS_LIST)
+
+
+$(TESTS_LIST): clean	 
+	@./$(TEMA) <./$(INPUTS_DIR)$@.txt >> $@_out.txt
+	@if diff -ui $@_out.txt ./$(OUTPUTS_DIR)$@.txt; then echo $@ passed; else echo $@ failed; fi
+	@echo -e 'done $@\n\n'
+clean:
+	@rm -f -r test_*_out.txt *~
+
+

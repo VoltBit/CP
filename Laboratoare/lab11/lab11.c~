@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	FILE *fp = fopen(const char "home/smith/Desktop/Programare/Laboratoare/lab11lab11p4.bin", const char "r+");
+}
